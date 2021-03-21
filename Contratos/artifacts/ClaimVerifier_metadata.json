@@ -1,0 +1,189 @@
+{
+	"compiler": {
+		"version": "0.4.22+commit.4cb486ee"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_identity",
+						"type": "address"
+					},
+					{
+						"name": "claimType",
+						"type": "uint256"
+					}
+				],
+				"name": "checkClaim",
+				"outputs": [
+					{
+						"name": "claimValid",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "trustedClaimHolder",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_identity",
+						"type": "address"
+					},
+					{
+						"name": "claimType",
+						"type": "uint256"
+					}
+				],
+				"name": "claimIsValid",
+				"outputs": [
+					{
+						"name": "claimValid",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "sig",
+						"type": "bytes"
+					},
+					{
+						"name": "dataHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "getRecoveredAddress",
+				"outputs": [
+					{
+						"name": "addr",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"name": "_trustedClaimHolder",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"name": "_identity",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "claimType",
+						"type": "uint256"
+					}
+				],
+				"name": "ClaimValid",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"name": "_identity",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "claimType",
+						"type": "uint256"
+					}
+				],
+				"name": "ClaimInvalid",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"localhost/Contratos/ClaimVerifier.sol": "ClaimVerifier"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"localhost/Contratos/ClaimHolder.sol": {
+			"keccak256": "0x7c7622cc41a9dbe0d2ce81d370e0e66fc579020c23583ff6c56959627159fd7b",
+			"urls": [
+				"bzzr://e0beb42144ba22b6e25e196e8bae1bba4e909102c82a6e30d0f62d1eb88d9086"
+			]
+		},
+		"localhost/Contratos/ClaimVerifier.sol": {
+			"keccak256": "0x229ce9ef33be14208d2d2e452aa2d8e99008f5be5b69ecaae460ff44a8fa8c4a",
+			"urls": [
+				"bzzr://27b44df0c6275be1f790ff7abd4277b6856935d6d130b17e179d0a2770788945"
+			]
+		},
+		"localhost/Contratos/ERC725.sol": {
+			"keccak256": "0x25c5749064ea05c287c5208a09011c4d8ac91acde6da307eb182756c537529d8",
+			"urls": [
+				"bzzr://a105ef2d19848ea496a04fad47024e7ec58ff95af038cfc73e553620cb0121e8"
+			]
+		},
+		"localhost/Contratos/ERC735.sol": {
+			"keccak256": "0xcce7bcfadc27d56f04d85340ad5d65eae5f3ae7985231b184b230803aac209c0",
+			"urls": [
+				"bzzr://a94488d69788db81733e3faabd3a320b76711e262b57c24bdc75d16933edb662"
+			]
+		},
+		"localhost/Contratos/KeyHolder.sol": {
+			"keccak256": "0x44d9e9f989b6c85360485bbdb99e20fe5a4915aecbbd7b8a1a6ac7ea243b67f4",
+			"urls": [
+				"bzzr://bf41a067edd0768b953366b9f2f1e04fb9b19ab716a343570b8506b041c931f1"
+			]
+		}
+	},
+	"version": 1
+}
